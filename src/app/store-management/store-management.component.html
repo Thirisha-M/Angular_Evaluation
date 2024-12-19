@@ -1,0 +1,77 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>Item Name</th>
+                <th>Price (Rs.)</th>
+                <th>Discount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="item-row">
+                <td>5001</td>
+                <td>Item 5001</td>
+                <td>20</td>
+                <td>No Discount</td>
+            </tr>
+            <tr class="item-row">
+                <td>5002</td>
+                <td>Item 5002</td>
+                <td>25</td>
+                <td>No Discount</td>
+            </tr>
+            <tr class="item-row">
+                <td>5003</td>
+                <td>Item 5003</td>
+                <td>30</td>
+                <td>No Discount</td>
+
+            </tr>
+            <tr class="item-row">
+                <td>5004</td>
+                <td>Item 5004</td>
+                <td>40</td>
+                <td>20% Off</td>
+
+            </tr>
+            <tr class="item-row">
+                <td>5005</td>
+                <td>Item 5005</td>
+                <td>50</td>
+                <td>20% Off</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="Item-form">
+        <h2>Store Management</h2>
+        <form (ngSubmit)="Billamount()">
+
+            <label for="id">Item id:</label>
+            <input type="number" [(ngModel)]="newitems.Itemid" name="id" required />
+
+            <label for="Quantity">Quantity:</label>
+            <input type="number" [(ngModel)]="newitems.Quantity" name="Quantity" required />
+
+            <label for="AddItems">Add Items:</label>
+            <select [(ngModel)]="newitems.AddItems" name="AddItems" required>
+                <option value="Y">Yes</option>
+                <option value="N">No</option>
+            </select>
+
+
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <div class="Item-list">
+        <h2>Item List</h2>
+        <ul>
+            <li *ngFor="let item of items">
+                <span>{{ item.Itemid }} - {{ item.Quantity }} - ₹{{ item.TotalAmount }}</span>
+                <button (click)="deleteitems(item.Itemid)">Delete</button>
+            </li>
+        </ul>
+
+        <h3>Total Bill: ₹{{ totalBill }}</h3>
+    </div>
