@@ -12,6 +12,28 @@ export class StoreManagementComponent {
   totalBill: number = 0;
   itemPrices = { 5001: 20, 5002: 25, 5003: 30, 5004: 40, 5005: 50 };
 
+  itemList = [
+    { Itemid: 5001, ItemName: 'Item 5001', Price: 20, Discount: 'No Discount', StockQuantity: 100 },
+    { Itemid: 5002, ItemName: 'Item 5002', Price: 25, Discount: 'No Discount', StockQuantity: 200 },
+    { Itemid: 5003, ItemName: 'Item 5003', Price: 30, Discount: 'No Discount', StockQuantity: 150 },
+    { Itemid: 5004, ItemName: 'Item 5004', Price: 40, Discount: '20% Off', StockQuantity: 50 },
+    { Itemid: 5005, ItemName: 'Item 5005', Price: 50, Discount: '20% Off', StockQuantity: 30 }
+  ];
+
+  restockQuantity: { [key: number]: number } = {};
+
+  restockItem(itemId: number) {
+    const restockQty = this.restockQuantity[itemId];
+    const item = this.itemList.find(item => item.Itemid === itemId);
+
+    if (item && restockQty > 0) {
+      item.StockQuantity += restockQty;
+      this.restockQuantity[itemId] = 0; 
+      alert(`Successfully restocked Item ${itemId} by ${restockQty} units.`);
+    } else {
+      alert('Please enter a valid restock quantity.');
+    }
+  }
   Billamount() {
     if (this.newitems.Itemid && this.newitems.Quantity > 0) {
       let price = this.itemPrices[this.newitems.Itemid as keyof typeof this.itemPrices];
@@ -25,7 +47,9 @@ export class StoreManagementComponent {
         this.resetForm();
         this.calculateTotalBill();
       } else if (this.newitems.AddItems === 'N') {
+
         this.calculateTotalBill();
+        this.resetForm
       }
     }
   }

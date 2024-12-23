@@ -1,0 +1,23 @@
+.homecontainer{
+    position: relative;
+}
+.homecontainer img{
+    width: 100%;  
+}
+.headercontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.headercontainer a{
+    display: flex;
+    padding: 20px;
+    font-size: 18px;
+    justify-content: end;
+    
+}
+.headercontainer h2{
+    
+}
+
