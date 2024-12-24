@@ -1,0 +1,141 @@
+.navbar-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.navbar1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.navbar-right{
+    margin-left: 30px;
+}
+.navbar-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distributes space between the images */
+    align-items: center; /* Centers images vertically */
+    margin-right: 30px; /* Space on the right of the navbar */
+}
+
+.navbar-left a {
+    display: inline-block;
+    margin: 0 10px; /* Adds space between the images */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-left a img {
+    width: 40px; /* Set a fixed size for the images */
+    height: 40px;
+    border-radius: 50%; /* Makes images circular */
+    object-fit: cover; /* Ensures the image is contained within the circular frame */
+    transition: transform 0.3s ease; /* Adds smooth transition for hover effect */
+}
+
+.navbar-left a:hover img {
+    transform: scale(1.1); /* Zoom in effect when hovered */
+}
+
+/* Optional: Add a box-shadow to the images when hovered for a more dynamic effect */
+.navbar-left a:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.navbar a{
+    padding: 20px;
+}
+.navbar-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-center a{
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    
+}
+.vegetables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 1600px;
+    padding: 10px;
+}
+
+.vegetable {
+    flex: 1 1 calc(22% - 10px);
+    max-width: calc(22% - 10px);
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vegetable:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.vegetable img {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    object-fit: cover; /* Ensures image maintains aspect ratio and fills the space */
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+.vegetable img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.vegetable h4 {
+    font-size: 21px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.vegetable p {
+    font-size: 21px;
+    color: #007bff;
+    margin: 4px 0;
+}
+
+.vegetable button {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 50px;
+}
+
+.vegetable button:hover {
+    background-color: #0056b3;
+}

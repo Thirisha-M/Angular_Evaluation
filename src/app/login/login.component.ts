@@ -16,8 +16,11 @@ export class LoginComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
+      
       if (this.username === 'admin' && this.password === 'admin123') {
-        this.router.navigate(['/store-management']);
+        // this.router.navigate(['/store-management']);
+        console.log("Success");
+        
       } else {
         this.loginError = 'Invalid credentials, please try again.';
       }

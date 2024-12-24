@@ -66,4 +66,15 @@ export class StoreManagementComponent {
   calculateTotalBill() {
     this.totalBill = this.items.reduce((sum, item) => sum + item.TotalAmount, 0);
   }
+
+  restock(){
+    for(let i=0;i<this.itemList.length;i++){
+      if(this.newitems.Itemid==this.itemList[i].Itemid){
+        this.itemList[i].StockQuantity-=this.newitems.Quantity
+      }
+    }
+
+  
+  }
 }
+

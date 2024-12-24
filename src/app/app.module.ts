@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { StoreManagementComponent } from './store-management/store-management.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { OrderComponent } from './order/order.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     StoreManagementComponent,
     LoginComponent,
     HomeComponent,
+    OrderComponent,
    
   ],
   imports: [

@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success">Login</button>
+    <button [routerLink]="'/order'" [disabled]="loginForm.invalid" class="btn btn-success">Submit</button>
 
     <div *ngIf="loginError" class="error">
       {{ loginError }}

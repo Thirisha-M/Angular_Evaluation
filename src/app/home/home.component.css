@@ -1,23 +1,338 @@
-.homecontainer{
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the home container */
+.homecontainer {
     position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
-.homecontainer img{
-    width: 100%;  
+
+.homecontainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    position: absolute;
+    z-index: 1; /* Image is the first layer */
 }
+
+/* Styling the header container */
 .headercontainer {
+    position: absolute;
+    top: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    z-index: 2; /* Navbar is the second layer */
+    padding: 10px 0;
 }
 
-.headercontainer a{
-    display: flex;
-    padding: 20px;
+.headercontainer a {
+    padding: 10px 20px;
     font-size: 18px;
-    justify-content: end;
-    
+    color: white; /* White color for contrast */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-.headercontainer h2{
-    
+
+.headercontainer a:hover {
+    color: #4CAF50; /* Highlight on hover */
+}
+
+/* Styling the heading container */
+.heading {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.heading h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+}
+.secondContainer{
+    background-color: white
+}
+/* Content Section (Paragraph and Button) */
+.content {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgb(248, 242, 242) ;; /* Light background for better contrast */
+}
+
+.paragraph {
+    max-width: 1000px;
+    margin: 0 auto 20px auto; /* Center and add spacing below */
+    color: #333; /* Darker text color for readability */
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.startbutton {
+    margin-top: 20px;
+}
+
+.startbutton button {
+    padding: 10px 20px;
+    font-size: 21px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 20%;
+}
+
+.startbutton button:hover {
+    background-color: #1cb924; /* Darker green on hover */
+}
+
+.cards{
+    padding: 20px;
+}
+
+/* Flip container for cards */
+.flip-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    background-color: rgb(248, 242, 242) ;
+   
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    perspective: 1000px; /* Enables 3D effect */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when the front is visible */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s; /* Smooth flipping animation */
+}
+
+.card-front {
+    background-color:rgb(248, 242, 242) ;;
+    text-align: center;
+    transform: rotateY(0deg); /* Default front-facing position */
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Image fits within the card */
+ 
+}
+
+.card-front p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.card-back {
+    background-color: white;
+    color: white;
+    transform: rotateY(180deg); /* Hidden back by default */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: green;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-back button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    color: white;
+}
+
+/* Flip effect */
+.card:hover .card-front {
+    transform: rotateY(180deg); /* Flips the front side */
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg); /* Shows the back side */
+}
+
+.third-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(248, 242, 242);
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    background-color:  rgb(248, 242, 242);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+
+.card2 img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card2 h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card2 p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.third-container  :hover{
+ 
+    background-color: rgb(113, 207, 113);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Dark background */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-column p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc;
+}
+
+/* FSSAI Section */
+.footer-fssai {
+    text-align: center;
+}
+
+.fssai-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Makes icons white */
+}
+
+/* Corporate Orders Button */
+.corporate-orders {
+    text-align: center;
+    padding: 20px;
+}
+
+.corporate-orders button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.corporate-orders button:hover {
+    background-color: #1cb924;
+}
+
+/* Powered By Section */
+.powered-by {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}
+
+.powered-by p {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.powered-by a {
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+}
+
+.powered-by a:hover {
+    text-decoration: underline;
 }
 
