@@ -8,7 +8,8 @@ import { StoreManagementComponent } from './store-management/store-management.co
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './order/order.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { IndividualaddtocartComponent } from './individualaddtocart/individualaddtocart.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,9 @@ import { OrderComponent } from './order/order.component';
     LoginComponent,
     HomeComponent,
     OrderComponent,
+    AdminComponent,
+    IndividualaddtocartComponent,
+
    
   ],
   imports: [

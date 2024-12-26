@@ -1,0 +1,95 @@
+.strawberry-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .image-section {
+    flex: 1;
+  }
+  
+  .strawberry-image {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 500px;
+  }
+  
+  .details-section {
+    flex: 1;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 22px;
+    color: #d32f2f;
+    margin: 10px 0;
+  }
+  
+  .size-section,
+  .quantity-section {
+    margin: 10px 0;
+  }
+  
+  .size-btn,
+  .quantity-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .quantity-btn:hover,
+  .size-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  .subtotal {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  
+  .buttons-section {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .add-to-cart-btn,
+  .buy-now-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #000;
+  }
+  
+  .buy-now-btn {
+    background-color: #ff5722;
+  }
+  
+  .badges img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .size-btn.active {
+    background-color: #ff5722;
+    color: #fff;
+  }
+  

@@ -10,14 +10,14 @@ export class StoreManagementComponent {
   items: item[] = [];
   newitems: item = { Itemid: 0, Quantity: 0, AddItems: '', TotalAmount: 0 };
   totalBill: number = 0;
-  itemPrices = { 5001: 20, 5002: 25, 5003: 30, 5004: 40, 5005: 50 };
+  itemPrices = { 5001: 40, 5002: 50, 5003: 20, 5004: 50, 5005: 30 };
 
   itemList = [
-    { Itemid: 5001, ItemName: 'Item 5001', Price: 20, Discount: 'No Discount', StockQuantity: 100 },
-    { Itemid: 5002, ItemName: 'Item 5002', Price: 25, Discount: 'No Discount', StockQuantity: 200 },
-    { Itemid: 5003, ItemName: 'Item 5003', Price: 30, Discount: 'No Discount', StockQuantity: 150 },
-    { Itemid: 5004, ItemName: 'Item 5004', Price: 40, Discount: '20% Off', StockQuantity: 50 },
-    { Itemid: 5005, ItemName: 'Item 5005', Price: 50, Discount: '20% Off', StockQuantity: 30 }
+    { Itemid: 5001, ItemName: 'tomato', Price:40, Discount: 'No Discount', StockQuantity: 100 },
+    { Itemid: 5002, ItemName: 'capsicum', Price: 25, Discount: 'No Discount', StockQuantity: 200 },
+    { Itemid: 5003, ItemName: 'onion', Price: 50, Discount: 'No Discount', StockQuantity: 150 },
+    { Itemid: 5004, ItemName: 'potato', Price: 50, Discount: '20% Off', StockQuantity: 50 },
+    { Itemid: 5005, ItemName: 'cauliflower', Price: 30, Discount: '20% Off', StockQuantity: 30 }
   ];
 
   restockQuantity: { [key: number]: number } = {};

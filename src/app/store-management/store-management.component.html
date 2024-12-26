@@ -7,7 +7,7 @@
                     <th>Item Name</th>
                     <th>Price (Rs.)</th>
                     <th>Discount</th>
-                    <th>Stock Quantity</th>
+                    <th>Stock Quantity in kg</th>
                     <th>Restock Quantity</th> <!-- Add Restock Quantity column -->
                 </tr>
             </thead>
@@ -37,33 +37,33 @@
             <tbody>
                 <tr class="item-row">
                     <td>5001</td>
-                    <td>Item 5001</td>
+                    <td>tomato</td>
                     <td>20</td>
                     <td>No Discount</td>
                 </tr>
                 <tr class="item-row">
                     <td>5002</td>
-                    <td>Item 5002</td>
+                    <td>onion</td>
                     <td>25</td>
                     <td>No Discount</td>
                 </tr>
                 <tr class="item-row">
                     <td>5003</td>
-                    <td>Item 5003</td>
+                    <td>potato</td>
                     <td>30</td>
                     <td>No Discount</td>
 
                 </tr>
                 <tr class="item-row">
                     <td>5004</td>
-                    <td>Item 5004</td>
+                    <td>potato</td>
                     <td>40</td>
                     <td>20% Off</td>
 
                 </tr>
                 <tr class="item-row">
                     <td>5005</td>
-                    <td>Item 5005</td>
+                    <td>cauliflower</td>
                     <td>50</td>
                     <td>20% Off</td>
                 </tr>
@@ -76,7 +76,7 @@
                 <label for="id">Item id:</label>
                 <input type="number" [(ngModel)]="newitems.Itemid" name="id" required />
 
-                <label for="Quantity">Quantity:</label>
+                <label for="Quantity">Quantity in kg:</label>
                 <input type="number" [(ngModel)]="newitems.Quantity" name="Quantity" required />
 
                 <label for="AddItems">Add Items:</label>

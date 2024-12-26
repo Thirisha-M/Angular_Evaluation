@@ -7,10 +7,10 @@
     </div>
     <div class="navbar-left">
         <a href="#section1">
-            <img src="\assets\images\Screenshot 2024-12-24 110628.png" alt="Image 1">
+            <img src="\assets\images\Screenshot 2024-12-24 110628.png" alt="Image 1" >
         </a>
         <a>
-            <img  [routerLink]="'/login'" src="\assets\images\Screenshot 2024-12-24 110635.png" alt="Image 2">
+            <img [routerLink]="'/login'" src="\assets\images\Screenshot 2024-12-24 110635.png" alt="Image 2">
         </a>
         <a href="#section3">
             <img src="\assets\images\Screenshot 2024-12-24 110644.png" alt="Image 3">
@@ -19,7 +19,7 @@
             <img src="\assets\images\Screenshot 2024-12-24 110654.png" alt="Image 4">
         </a>
     </div>
-    
+
 </div>
 <div class="navbar-center">
     <a href="#FRUITS">FRUITS</a>
@@ -29,52 +29,56 @@
 </div>
 <div class="vegetables">
     <div class="vegetable">
-        <img src="\assets\images\Screenshot 2024-12-24 122318.png" alt="Tomato">
+
+        <img [routerLink]="'/individual'" src="\assets\images\Screenshot 2024-12-24 122318.png" alt="Tomato">
         <h4>Tomato</h4>
         <p>Rs.40</p>
-        <button>Add to cart</button>
+
 
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122443.png" alt="capsicum">
         <h4>capsicum</h4>
         <p>Rs.20</p>
-        <button>Add to cart</button>
+
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122325.png" alt="oninon">
         <h4>onion</h4>
         <p>Rs.50</p>
-        <button>Add to cart</button>
+
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122332.png" alt="cauliflower">
         <h4>cauliflower</h4>
         <p>Rs.25</p>
-        <button>Add to cart</button>
+
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122337.png" alt="lemon">
         <h4>lemon</h4>
         <p>Rs.10</p>
-        <button>Add to cart</button>
+
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122350.png" alt="ladysfinger">
         <h4>ladysfinger</h4>
         <p>Rs.30</p>
-        <button>Add to cart</button>
+
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122342.png" alt="potato">
         <h4>potato</h4>
         <p>Rs.50</p>
-        <button>Add to cart</button>
     </div>
     <div class="vegetable">
         <img src="\assets\images\Screenshot 2024-12-24 122405.png" alt="ginger">
         <h4>ginger</h4>
         <p>Rs.5</p>
-        <button [routerLink]="'/store'">Add to cart</button>
+
     </div>
+
+</div>
+<div class="cartbutton">
+<button [routerLink]="'/store'">Add to cart</button>
 </div>

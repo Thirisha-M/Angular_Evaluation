@@ -1,0 +1,43 @@
+<div class="strawberry-container">
+    <div class="image-section">
+      <img
+        src="\assets\images\Screenshot 2024-12-26 145203.png"
+        alt="Strawberries"
+        class="strawberry-image"
+      />
+    </div>
+    <div class="details-section">
+      <h1>Tomato special</h1>
+      <p><strong>SKU:</strong> 398</p>
+      <p class="price">Rs. 150.00</p>
+      <p><strong>Approx:</strong> 250Gms</p>
+      <div class="size-section">
+        <p><strong>Size:</strong></p>
+        <button
+          *ngFor="let size of sizes"
+          [class.active]="size === selectedSize"
+          (click)="selectSize(size)"
+        >
+          {{ size }}
+        </button>
+      </div>
+      <div class="quantity-section">
+        <p><strong>Quantity:</strong></p>
+        <button class="quantity-btn" (click)="decreaseQuantity()">-</button>
+        <input type="number" [value]="quantity" readonly />
+        <button class="quantity-btn" (click)="increaseQuantity()">+</button>
+      </div>
+      <p class="subtotal"><strong>Subtotal:</strong> Rs. {{ subtotal }}</p>
+      <div class="buttons-section">
+        <button class="add-to-cart-btn" (click)="addToCart()">ADD TO CART</button>
+        <button class="buy-now-btn" (click)="buyNow()">BUY IT NOW</button>
+      </div>
+      <p><i>14 customers are viewing this product</i></p>
+      <p><strong>Tags:</strong> / VEGETABLES</p>
+      <div class="badges">
+        <img src="\assets\images\Screenshot 2024-12-26 142549.png" alt="Norton Secure" />
+        <img src="\assets\images\Screenshot 2024-12-26 142559.png" alt="Trust Verified" />
+      </div>
+    </div>
+  </div>
+  
