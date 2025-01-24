@@ -3,15 +3,8 @@
   <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
     <div class="form-group">
       <label for="username">Username:</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        [(ngModel)]="username"
-        required
-        #usernameInput="ngModel"
-        class="form-control"
-      />
+      <input type="text" id="username" name="username" [(ngModel)]="username" required #usernameInput="ngModel"
+        class="form-control" />
       <div *ngIf="usernameInput.invalid && usernameInput.touched" class="error">
         Username is required.
       </div>
@@ -19,22 +12,16 @@
 
     <div class="form-group">
       <label for="password">Password:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        [(ngModel)]="password"
-        required
-        minlength="6"
-        #passwordInput="ngModel"
-        class="form-control"
-      />
+      <input type="password" id="password" name="password" [(ngModel)]="password" required minlength="6"
+        #passwordInput="ngModel" class="form-control" />
       <div *ngIf="passwordInput.invalid && passwordInput.touched" class="error">
         Password is required and must be at least 6 characters.
       </div>
     </div>
 
     <button [routerLink]="'/order'" [disabled]="loginForm.invalid" class="btn btn-success">Submit</button>
+
+
 
     <div *ngIf="loginError" class="error">
       {{ loginError }}

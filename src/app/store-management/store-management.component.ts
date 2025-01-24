@@ -10,7 +10,7 @@ export class StoreManagementComponent {
   items: item[] = [];
   newitems: item = { Itemid: 0, Quantity: 0, AddItems: '', TotalAmount: 0 };
   totalBill: number = 0;
-  itemPrices = { 5001: 40, 5002: 50, 5003: 20, 5004: 50, 5005: 30 };
+  itemPrices = { 5001:40, 5002: 50, 5003: 20, 5004: 50, 5005: 30 };
 
   itemList = [
     { Itemid: 5001, ItemName: 'tomato', Price:40, Discount: 'No Discount', StockQuantity: 100 },
@@ -49,8 +49,15 @@ export class StoreManagementComponent {
       } else if (this.newitems.AddItems === 'N') {
 
         this.calculateTotalBill();
-        this.resetForm
+        this.resetForm 
       }
+    }
+    else if(this.newitems.Quantity<1)
+    {
+      alert("Enter a valid quantity")
+    }
+    else{
+      alert("Enter a valid id and quantity")
     }
   }
 
